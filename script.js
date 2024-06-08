@@ -107,6 +107,8 @@ function animate() {
             if (distance <= ball.radius + otherBall.radius) {
                 
                 // Collision detected now handle it
+                ball.element.style.backgroundColor=ball.getRandomColor()
+                otherBall.element.style.backgroundColor=ball.getRandomColor()
                 const angle = Math.atan2(dy, dx); // finding the angle of the point of collision with respect to positive x-axis 
                 const sin = Math.sin(angle);
                 const cos = Math.cos(angle);
